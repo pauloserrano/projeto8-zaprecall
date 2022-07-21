@@ -1,3 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root{
+    --primary-red: #D70900;
+    --primary-card: #FFFFD4;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.root{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 375px;
+    padding: 3rem;
+}
+
 body{
+    display: flex;
+    justify-content: center;
     background-color: #FB6B6B;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    margin-bottom: 3rem;
+    font-size: 36px;
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+
+header::before{
+    content: url(../assets/images/logo.png);
+    margin-right: 24px;
+}
+
+header.big{
+    flex-direction: column;
+}
+
+header.big::before{
+    display: block;
+}
+
+.btn-start{
+    color: var(--primary-red);
+    font-size: 18px;
+    border: 1px solid var(--primary-red);
+    border-radius: 5px;
+    padding: 1em 3em;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+main{
+    width: 100%;
+}
+
+li {
+    position: relative;
+    min-height: 130px;
+    color: #333;
+    font-size: 18px;
+    transform-style: preserve-3d;
+    transition: .3s linear transform;
+}
+
+li.flipped{
+    transform: rotateY(-180deg);
+}
+
+li .card-front, li .card-back{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    min-height: 130px;
+    padding: 16px 8px 8px 16px;
+    border-radius: 5px;
+    background-color: var(--primary-card);
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+li .card-front svg{
+    margin-left: auto;
+}
+
+li .card-back{
+    transform: rotateY(180deg);
 }
