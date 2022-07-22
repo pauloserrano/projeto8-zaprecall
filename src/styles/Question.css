@@ -1,0 +1,12 @@
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    background-color: white;
+}
+
+li svg{
+    position: relative;
+    left: 10px;
+}

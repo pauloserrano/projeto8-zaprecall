@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-family: 'Righteous', cursive;
+    padding: 1.25em 0;
+    color: white;
+}
+
+header::before{
+    content: url('../assets/images/logo.png');
+    margin-right: 24px;
+}

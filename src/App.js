@@ -1,6 +1,9 @@
-import { useState } from "react"
-import Header from "./components/Header"
-import Cards from "./components/Cards"
+import './reset.css'
+import './App.css'
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Main from './components/Main'
 
 /* ICONS */
 // BsPlay
@@ -11,15 +14,11 @@ import Cards from "./components/Cards"
 // TiArrowLoop
 
 const App = () => {
-  const [hasStarted, setHasStarted] = useState(true)
-
   return (
     <>
-      <Header type={hasStarted ? 'small' : 'big'}>ZapRecall</Header>
-      {/* <button className="btn-start" onClick={() => setHasStarted(true)}>Iniciar Recall</button> */}
-      <main>
-        <Cards />
-      </main>
+      <Header />
+      <Main />
+      <Footer />
     </>
   )
 }

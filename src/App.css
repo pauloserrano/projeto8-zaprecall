@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root{
+    --primary-bg: #FB6B6B;
+    --primary-red: #D70900;
+    --primary-card: #FFFFD4;
+    --primary-orange: #FF922E;
+    --primary-green: #2FBE34;
+    --secondary-red: #FF3030;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}

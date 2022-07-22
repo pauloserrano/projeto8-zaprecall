@@ -1,10 +1,9 @@
-const Header = ({ type, children }) => {
+import '../styles/Header.css'
 
+const Header = () => {
   return (
-    <header className={ type }>
-        {children}
-    </header>
-  ) 
+    <header>ZapRecall</header>
+  )
 }
 
 export default Header
