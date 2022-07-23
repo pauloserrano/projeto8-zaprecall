@@ -31,7 +31,7 @@ const App = () => {
   const handleRestart = () => {
     setHasStarted(false)
     setDisplayIcons([])
-    setDeck(deck[0])
+    setDeck(decks[0])
     setGoal(undefined)
   }
 
