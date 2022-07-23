@@ -34,15 +34,14 @@ const App = () => {
   }
 
   const handleStart = () => {
-    console.log(deck)
     if (!deck.cards){
       alert('Selecione um deck válido')
       return
 
-    } else if (goal < 1 || goal > deck.length || goal === undefined){
+    } else if (goal < 1 || goal > deck.cards.length || goal === undefined){
       alert(`Insira uma meta de zaps válida`)
       return
-    } 
+    }
 
     setHasStarted(true)
   }
