@@ -8,13 +8,6 @@ import Main from './components/Main'
 import Questions from './components/Questions'
 import Footer from './components/Footer'
 import deck from "./services/decks"
-/* ICONS */
-// BsPlay
-// BsCheckCircleFill  
-// BsFillCheckCircleFill
-// BsFillQuestionCircleFill
-// BsFillXCircleFill
-// TiArrowLoop
 
 const App = () => {
   const [displayIcons, setDisplayIcons] = useState([])

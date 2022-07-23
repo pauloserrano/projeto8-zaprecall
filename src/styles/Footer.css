@@ -9,9 +9,23 @@ footer{
     min-height: 70px;
     padding: 16px;
     font-size: 18px;
+    text-align: center;
     background-color: white;
 }
 
+footer > *{
+    width: min(90%, 70%);
+}
+
 footer > *:not(:last-child){
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li:not(:last-child){
+    margin-right: 6px;
 }

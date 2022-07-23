@@ -19,3 +19,7 @@ ol li:not(.card), ol li > div{
     font-size: 18px;
     cursor: pointer;
 }
+
+strong{
+    font-weight: bold;
+}
