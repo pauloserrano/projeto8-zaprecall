@@ -1,7 +1,7 @@
 const testDeck = [
     {
-        question: "O que é JSX",
-        answer: "Uma extensão de linguagem do JavaScript"
+        question: "Lorem Ipsum",
+        answer: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     },
 ]
 
@@ -40,4 +40,4 @@ const options = [
     }
 ]
 
-export default testDeck
+export default options

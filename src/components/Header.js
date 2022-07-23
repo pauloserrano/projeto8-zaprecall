@@ -2,7 +2,7 @@ import '../styles/Header.css'
 
 const Header = () => {
   return (
-    <header>ZapRecall</header>
+    <header class="logo-top">ZapRecall</header>
   )
 }
 

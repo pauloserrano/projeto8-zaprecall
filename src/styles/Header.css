@@ -1,4 +1,4 @@
-header{
+header.logo-top{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@ header{
     color: white;
 }
 
-header::before{
+header.logo-top::before{
     content: url('../assets/images/logo.png');
     margin-right: 24px;
 }

@@ -21,7 +21,7 @@ const Footer = ({ deck, displayIcons }) => {
   }
 
   return (
-    <footer>
+    <footer class="results-container">
       {resultDisplay}
       <div>{displayIcons.length}/{deck.length} CONCLUÍDOS</div>
       <ul className="icons">{displayIcons.map(icon => (

@@ -1,4 +1,4 @@
-footer{
+footer.results-container{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -13,19 +13,19 @@ footer{
     background-color: white;
 }
 
-footer > *{
+footer.results-container > *{
     width: min(90%, 70%);
 }
 
-footer > *:not(:last-child){
+footer.results-container > *:not(:last-child){
     margin-bottom: 12px;
 }
 
-footer ul{
+footer.results-container ul{
     display: flex;
     justify-content: center;
 }
 
-footer ul li:not(:last-child){
+footer.results-container ul li:not(:last-child){
     margin-right: 6px;
 }

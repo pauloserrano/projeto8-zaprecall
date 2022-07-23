@@ -1,6 +1,13 @@
+strong{
+    font-weight: bold;
+}
+
 main{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: sans-serif;
 }
 
@@ -20,6 +27,23 @@ ol li:not(.card), ol li > div{
     cursor: pointer;
 }
 
-strong{
-    font-weight: bold;
+h1.logo-text{
+    margin: .5em 0;
+    font-size: 48px;
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+
+.start-btn{
+    width: min(250px, 80%);
+    padding: 1em 2em;
+    font-size: 18px;
+    color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start-btn:active{
+    transform: translateY(2px)
 }
