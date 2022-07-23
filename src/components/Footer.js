@@ -1,8 +1,10 @@
 import '../styles/Footer.css'
 
-const Footer = () => {
+const Footer = ({ deck, displayIcons }) => {
   return (
-    <footer>0/4 CONCLUÍDOS</footer>
+    <footer>
+      <div>{displayIcons.length}/{deck.length} CONCLUÍDOS</div>
+    </footer>
   )
 }
 

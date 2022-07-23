@@ -1,13 +1,29 @@
-import { BsPlay } from 'react-icons/bs'
+import { useState } from 'react'
 
+import Flashcard from './Flashcard'
+import QuestionPrompt from './QuestionPrompt'
 import '../styles/Question.css'
 
-const Question = () => {
+const Question = ({ question, answer, setDisplayIcons }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [questionDisplay, setQuestionDisplay] = useState('play')
+
   return (
-    <li>
-        <span>Pergunta 1</span>
-        <BsPlay size="40px" />
-    </li>
+    <>
+      {isOpen 
+      ? <Flashcard 
+          answer={answer} 
+          question={question} 
+          setIsOpen={setIsOpen} 
+          setQuestionDisplay={setQuestionDisplay} 
+          setDisplayIcons={setDisplayIcons}
+        />
+      : <QuestionPrompt 
+          setIsOpen={setIsOpen}
+          questionDisplay={questionDisplay}
+        />
+      }
+    </>
   )
 }
 

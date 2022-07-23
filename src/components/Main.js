@@ -1,14 +1,9 @@
-import Question from './Question'
 import '../styles/Main.css'
-import Flashcard from './Flashcard'
 
-const Main = () => {
+const Main = ({ children }) => {
   return (
     <main>
-        <ol>
-            <Question />
-            <Flashcard />
-        </ol>
+      {children}
     </main>
   )
 }

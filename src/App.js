@@ -1,10 +1,13 @@
+import { useState } from 'react'
+
 import './reset.css'
 import './App.css'
 
 import Header from './components/Header'
-import Footer from './components/Footer'
 import Main from './components/Main'
-
+import Questions from './components/Questions'
+import Footer from './components/Footer'
+import deck from "./services/decks"
 /* ICONS */
 // BsPlay
 // BsCheckCircleFill  
@@ -14,11 +17,15 @@ import Main from './components/Main'
 // TiArrowLoop
 
 const App = () => {
+  const [displayIcons, setDisplayIcons] = useState([])
+
   return (
     <>
       <Header />
-      <Main />
-      <Footer />
+      <Main>
+        <Questions deck={deck} setDisplayIcons={setDisplayIcons} />
+        <Footer deck={deck} displayIcons={displayIcons} />
+      </Main>
     </>
   )
 }

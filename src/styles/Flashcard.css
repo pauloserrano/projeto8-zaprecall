@@ -10,15 +10,12 @@ li.card.flipped{
     transform: rotateY(180deg);
 }
 
-li.card.flipped .card-face{
-    display: none;
-}
-
 li.card .card-face, li.card .card-back{
     position: absolute;
     width: 100%;
     height: 100%;
     font-weight: 400;
+    transform: rotateX(0deg); /* Firefox bug fix*/
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
 }
@@ -55,4 +52,5 @@ li.card .card-back{
     font-size: 12px;
     text-align: center;
     color: white;
+    cursor: pointer;
 }

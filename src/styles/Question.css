@@ -4,9 +4,35 @@ li{
     align-items: center;
     font-weight: bold;
     background-color: white;
+    counter-increment: questionIndex;
+}
+
+li.bad, li.ok, li.good{
+    text-decoration: line-through;
+    pointer-events: none;
+}
+
+li.bad{
+    color: var(--secondary-red);
+}
+
+li.ok{
+    color: var(--primary-orange)
+}
+
+li.good{
+    color: var(--primary-green)
+}
+
+li span{
+    line-height: 40px;
+}
+
+li span:after{
+    content: counter(questionIndex);
+    margin-left: .5ch;
 }
 
 li svg{
     position: relative;
-    left: 10px;
 }
