@@ -8,12 +8,12 @@ ol {
     width: min(80%, 550px);
 }
 
-li{
+ol li{
     border-radius: 5px;
     margin-bottom: 1em;
 }
 
-li:not(.card), li > div{
+ol li:not(.card), ol li > div{
     width: 100%;
     padding: 12px;
     font-size: 18px;
