@@ -1,8 +1,8 @@
 import '../styles/Main.css'
 
-const Main = ({ children, screen }) => {
+const Main = ({ children, type }) => {
   return (
-    <main className={screen}>
+    <main className={type}>
       {children}
     </main>
   )

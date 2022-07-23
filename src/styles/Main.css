@@ -14,6 +14,10 @@ main.start-screen{
     justify-content: center;
 }
 
+main.start-screen > *:not(:last-child){
+    margin-bottom: 1em;
+}
+
 ol {
     width: min(80%, 550px);
     height: calc(100vh - 250px);
@@ -27,26 +31,43 @@ ol li{
 }
 
 ol li:not(.card), ol li > div{
-    width: 90%;
+    width: 95%;
     padding: 12px;
     font-size: 18px;
     cursor: pointer;
 }
 
 h1.logo-text{
-    margin: .5em 0;
     font-size: 48px;
     font-family: 'Righteous', cursive;
     color: white;
 }
 
-.start-btn{
+.start-btn, input, select{
     width: min(250px, 80%);
-    padding: 1em 2em;
     font-size: 18px;
+    border-radius: 5px;
+}
+
+input, select{
+    font-size: 14px;
+    padding: 1em 0 1em 1em;
+    border: none;
+}
+
+select{
+    background-color: white;
+    padding: 1em;
+}
+
+option[value="placeholder"]{
+    color: #adadad;
+}
+
+.start-btn{
+    padding: 1em 2em;
     color: var(--primary-red);
     border: 1px solid var(--primary-red);
-    border-radius: 10px;
     cursor: pointer;
 }
 

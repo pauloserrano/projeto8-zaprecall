@@ -1,16 +1,16 @@
 import '../styles/Footer.css'
 import icons from '../data/icons'
 
-const Footer = ({ deck, displayIcons, setDisplayIcons, setHasStarted }) => {
+const Footer = ({ deck, goal, displayIcons, handleRestart }) => {
   let resultDisplay
 
   if (displayIcons.length === deck.length){
-    const badResult = displayIcons.filter(icon => icon === 'bad').length > 0
+    const goodResult = displayIcons.filter(icon => icon !== 'bad').length >= goal
     
-    if (!badResult){
+    if (goodResult){
       resultDisplay = <>
         <p>🥳 <strong>Parabéns</strong></p>
-        <p>Você não esqueceu de nenhum flashcard!</p>
+        <p>Você bateu a meta de flashcards!</p>
       </>
     } else {
       resultDisplay = <>
@@ -20,15 +20,11 @@ const Footer = ({ deck, displayIcons, setDisplayIcons, setHasStarted }) => {
     }
   }
 
-  const handleRestart = () => {
-    setHasStarted(false)
-    setDisplayIcons([])
-  }
-
   return (
     <footer class="results-container">
       {resultDisplay}
-      <div>{displayIcons.length}/{deck.length} CONCLUÍDOS</div>
+      <div><strong>{displayIcons.length}/{deck.length} CONCLUÍDOS</strong></div>
+      <div>(Meta de acertos: {goal})</div>
       {displayIcons.length > 0
         ? <>
           <ul className="icons">{displayIcons.map(icon => (
