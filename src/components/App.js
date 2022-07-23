@@ -21,7 +21,7 @@ const App = () => {
   const [hasStarted, setHasStarted] = useState(false)
   const [displayIcons, setDisplayIcons] = useState([])
   const [deck, setDeck] = useState(decks[0])
-  const [goal, setGoal] = useState()
+  const [goal, setGoal] = useState(undefined)
 
 
   const shuffle = (deck) => {
@@ -31,6 +31,8 @@ const App = () => {
   const handleRestart = () => {
     setHasStarted(false)
     setDisplayIcons([])
+    setDeck(deck[0])
+    setGoal(undefined)
   }
 
   const handleStart = () => {

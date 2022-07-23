@@ -21,7 +21,7 @@ const Footer = ({ deck, goal, displayIcons, handleRestart }) => {
   }
 
   return (
-    <footer class="results-container">
+    <footer className="results-container">
       {resultDisplay}
       <div><strong>{displayIcons.length}/{deck.length} CONCLUÍDOS</strong></div>
       <div>(Meta de acertos: {goal})</div>
