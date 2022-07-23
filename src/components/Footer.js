@@ -1,7 +1,7 @@
 import '../styles/Footer.css'
 import icons from '../data/icons'
 
-const Footer = ({ deck, displayIcons }) => {
+const Footer = ({ deck, displayIcons, setDisplayIcons, setHasStarted }) => {
   let resultDisplay
 
   if (displayIcons.length === deck.length){
@@ -20,14 +20,25 @@ const Footer = ({ deck, displayIcons }) => {
     }
   }
 
+  const handleRestart = () => {
+    setHasStarted(false)
+    setDisplayIcons([])
+  }
+
   return (
     <footer class="results-container">
       {resultDisplay}
       <div>{displayIcons.length}/{deck.length} CONCLUÍDOS</div>
-      <ul className="icons">{displayIcons.map(icon => (
-        <li className={icon}>{icons[icon]}</li>
-      ))}
-      </ul>
+      {displayIcons.length > 0
+        ? <>
+          <ul className="icons">{displayIcons.map(icon => (
+          <li className={icon}>{icons[icon]}</li>
+        ))}
+        </ul>
+        </>
+        : ''
+      }
+      {resultDisplay && <button onClick={handleRestart} className='restart-btn'>REINICIAR RECALL</button>}
     </footer>
   )
 }

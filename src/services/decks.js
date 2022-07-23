@@ -40,4 +40,4 @@ const options = [
     }
 ]
 
-export default options
+export default testDeck

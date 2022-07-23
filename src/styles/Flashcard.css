@@ -1,5 +1,6 @@
 li.card{
     position: relative;
+    width: 90%;
     min-height: 130px;
     background-color: var(--primary-card);
     transform-style: preserve-3d;
