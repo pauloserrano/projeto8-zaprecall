@@ -7,7 +7,10 @@ main{
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    font-family: sans-serif;
+}
+
+main.start-screen, main:not(.start-screen){
+    font-family: 'Recursive', sans-serif;
 }
 
 main.start-screen{
@@ -52,6 +55,7 @@ input, select{
     font-size: 14px;
     padding: 1em 0 1em 1em;
     border: none;
+    font-family: 'Recursive', sans-serif;
 }
 
 select{
@@ -67,6 +71,7 @@ option[value="placeholder"]{
     padding: 1em 2em;
     color: var(--primary-red);
     border: 1px solid var(--primary-red);
+    font-family: 'Recursive', sans-serif;
     cursor: pointer;
 }
 
@@ -79,4 +84,5 @@ option[value="placeholder"]{
     bottom: .5em;
     font-size: 0.9em;
     color: rgba(0, 0, 0, 0.5);
+    font-family: 'Recursive', sans-serif;
 }

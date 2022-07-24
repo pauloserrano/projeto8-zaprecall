@@ -40,6 +40,7 @@ footer.results-container .restart-btn{
     color: white;
     background-color: #FB6B6B;
     cursor: pointer;
+    font-family: 'Recursive', sans-serif;
 }
 
 .restart-btn:active{
