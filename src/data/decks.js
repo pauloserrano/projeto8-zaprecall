@@ -5,7 +5,7 @@ const decks = [
     },
     {   
         value: 'javascript',
-        name: 'Javascript', 
+        name: 'Você sabe Javascript?', 
         cards: [
             {
                 question: "O que é JSX",
