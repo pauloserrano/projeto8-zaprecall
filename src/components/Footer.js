@@ -1,9 +1,9 @@
 import '../styles/Footer.css'
 import icons from '../data/icons'
 
-const Footer = ({ deck, goal, displayIcons, handleRestart }) => {
-  let resultDisplay
+let resultDisplay
 
+const Footer = ({ deck, goal, displayIcons, handleRestart }) => {
   if (displayIcons.length === deck.length){
     const goodResult = displayIcons.filter(icon => icon !== 'bad').length >= goal
     
@@ -27,10 +27,9 @@ const Footer = ({ deck, goal, displayIcons, handleRestart }) => {
       <div>(Meta de acertos: {goal})</div>
       {displayIcons.length > 0
         ? <>
-          <ul className="icons">{displayIcons.map(icon => (
-          <li className={icon}>{icons[icon]}</li>
-        ))}
-        </ul>
+          <ul className="icons">
+            {displayIcons.map(icon => (<li className={icon}>{icons[icon]}</li>))}
+          </ul>
         </>
         : ''
       }

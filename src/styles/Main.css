@@ -21,12 +21,15 @@ main.start-screen > *:not(:last-child){
 ol {
     width: min(80%, 550px);
     height: calc(100vh - 250px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 ol li{
     margin: 0 auto;
     border-radius: 5px;
+}
+
+ol li:not(:last-child){
     margin-bottom: 1em;
 }
 

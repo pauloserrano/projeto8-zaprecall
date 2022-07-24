@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // Components
 import Header from './Header'
@@ -7,7 +7,8 @@ import Questions from './Questions'
 import Footer from './Footer'
 
 // Decks
-import decks from "../services/decks"
+import decks from "../data/decks"
+import api from "../services/axios"
 
 //Images
 import logoLarge from '../assets/images/logo-grande.svg'
@@ -20,20 +21,43 @@ import '../styles/App.css'
 const App = () => {
   const [hasStarted, setHasStarted] = useState(false)
   const [displayIcons, setDisplayIcons] = useState([])
-  const [deck, setDeck] = useState(decks[0])
+  const [availableDecks, setAvailableDecks] = useState(decks)
+  const [deck, setDeck] = useState(availableDecks[0])
   const [goal, setGoal] = useState(undefined)
+  
+  useEffect(() => {
+    api.buzzquizz.get().then(({data}) => {
+      const apiDecks = data.map(quiz => {
+        return {
+          value: `${quiz.id * 10}`,
+          name: quiz.title,
+          cards: quiz.questions.map(question => {
+            const correctAnswer = question.answers.find(answer => answer.isCorrectAnswer === true)
+
+            return {
+              question: question.title,
+              answer: correctAnswer.text
+            }
+          })
+        }
+      })
+      setAvailableDecks(arr => [...arr, ...apiDecks])
+    }).catch(err => console.error(err))
+  }, [])
 
 
   const shuffle = (deck) => {
     return deck.sort(() => (Math.random() - 0.5))
   }
 
+
   const handleRestart = () => {
     setHasStarted(false)
     setDisplayIcons([])
-    setDeck(decks[0])
+    setDeck(availableDecks[0])
     setGoal(undefined)
   }
+
 
   const handleStart = () => {
     if (!deck.cards){
@@ -47,6 +71,7 @@ const App = () => {
 
     setHasStarted(true)
   }
+
 
   return (
     <>
@@ -70,8 +95,8 @@ const App = () => {
             <h1 className='logo-text'>ZapRecall</h1>
             <select 
               value={deck.value} 
-              onChange={(e) => setDeck(decks.find(deck => deck.value === e.target.value))}>
-              {decks.map((deck, id) => (<option key={id} value={deck.value}>{deck.name}</option>))}
+              onChange={(e) => setDeck(availableDecks.find(deck => deck.value === e.target.value))}>
+              {availableDecks.map((deck, id) => (<option key={id} value={deck.value}>{deck.name}</option>))}
             </select>
             <input 
               type="number" 

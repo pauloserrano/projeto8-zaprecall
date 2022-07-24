@@ -46,17 +46,17 @@ const decks = [
         name: 'Deck teste', 
         cards: [
             {
-                question: "Lorem Ipsum",
-                answer: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                question: "Componentes devem iniciar com __",
+                answer: "letra maiúscula"
             },
             {
-                question: "Lorem Ipsum",
-                answer: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                question: "Podemos colocar  dentro do JSX",
+                answer: "expressões"
             },
             {
-                question: "Lorem Ipsum",
-                answer: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-            },
+                question: "O ReactDOM nos ajuda __",
+                answer: "interagindo com a DOM para colocar componentes React na mesma"
+            }
         ]
     },
 
