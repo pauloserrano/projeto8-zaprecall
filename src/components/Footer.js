@@ -1,9 +1,10 @@
 import '../styles/Footer.css'
 import icons from '../data/icons'
 
-let resultDisplay
 
 const Footer = ({ deck, goal, displayIcons, handleRestart }) => {
+  let resultDisplay
+  
   if (displayIcons.length === deck.length){
     const goodResult = displayIcons.filter(icon => icon !== 'bad').length >= goal
     
