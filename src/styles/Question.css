@@ -4,7 +4,7 @@ ol li{
     align-items: center;
     font-weight: bold;
     background-color: white;
-    word-break: break-all;
+    word-break: break-word;
     counter-increment: questionIndex;
 }
 
