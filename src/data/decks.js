@@ -40,26 +40,7 @@ const decks = [
                 answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente "
             }
         ]
-    },
-    {
-        value: 'teste',
-        name: 'Deck teste', 
-        cards: [
-            {
-                question: "Componentes devem iniciar com __",
-                answer: "letra maiúscula"
-            },
-            {
-                question: "Podemos colocar  dentro do JSX",
-                answer: "expressões"
-            },
-            {
-                question: "O ReactDOM nos ajuda __",
-                answer: "interagindo com a DOM para colocar componentes React na mesma"
-            }
-        ]
-    },
-
+    }
 ]
 
 export default decks
