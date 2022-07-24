@@ -52,10 +52,10 @@ const App = () => {
 
 
   const handleRestart = () => {
-    setHasStarted(false)
     setDisplayIcons([])
     setDeck(availableDecks[0])
     setGoal(undefined)
+    setHasStarted(false)
   }
 
 
@@ -103,9 +103,10 @@ const App = () => {
               value={goal} 
               max={deck.length} 
               min={1} 
-              placeholder={'Digite sua meta de zaps...'} 
+              placeholder={`Digite sua meta de zaps`}
               onChange={e => setGoal(e.target.value)} 
             />
+            {deck.cards && (<p className="goal-max">(máx:{deck.cards && deck.cards.length})</p>)}
             <button className="start-btn" onClick={handleStart}>Iniciar Recall</button>
           </>
         }
