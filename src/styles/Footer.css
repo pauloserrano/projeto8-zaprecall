@@ -31,6 +31,10 @@ footer.results-container ul li:not(:last-child){
     margin-right: 6px;
 }
 
+footer.results-container .restart-btn:active{
+    transform: translate(2px, 2px);
+}
+
 footer.results-container .restart-btn{
     max-width: 300px;
     padding: .5em 1em;
@@ -41,8 +45,4 @@ footer.results-container .restart-btn{
     background-color: #FB6B6B;
     cursor: pointer;
     font-family: 'Recursive', sans-serif;
-}
-
-.restart-btn:active{
-    transform: translate(2px, 2px);
 }

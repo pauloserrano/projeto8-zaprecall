@@ -12,6 +12,9 @@ li.card.flipped{
 }
 
 li.card .card-face, li.card .card-back{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -19,12 +22,6 @@ li.card .card-face, li.card .card-back{
     transform: rotateX(0deg); /* Firefox bug fix*/
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-}
-
-li.card .card-face, li.card .card-back{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
 }
 
 li.card .card-face svg{

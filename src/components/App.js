@@ -29,7 +29,7 @@ const App = () => {
     api.buzzquizz.get().then(({data}) => {
       const apiDecks = data.map(quiz => {
         return {
-          value: `${quiz.id * 10}`,
+          value: `${quiz.id}`,
           name: quiz.title,
           cards: quiz.questions.map(question => {
             const correctAnswer = question.answers.find(answer => answer.isCorrectAnswer === true)
@@ -47,7 +47,8 @@ const App = () => {
 
 
   const shuffle = (deck) => {
-    return deck.sort(() => (Math.random() - 0.5))
+    const negativeAllower = 0.5
+    return deck.sort(() => (Math.random() - negativeAllower))
   }
 
 
